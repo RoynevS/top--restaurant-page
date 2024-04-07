@@ -1,5 +1,6 @@
 import foodImage from "./images/food_display.jpg";
 import ambianceImage from "./images/restaurant_interior.jpg";
+import "./styles/general-style.css";
 
 export default function createHomepage() {
   const main = () => {
@@ -7,7 +8,7 @@ export default function createHomepage() {
     const heroSection = document.createElement("section");
     const primaryHeading = document.createElement("h1");
     const mainSection = document.createElement("section");
-    const mainDescription = document.createElement("p");
+    const mainDescription = document.createElement("h2");
     const foodDescription = document.createElement("p");
     const ambianceDescription = document.createElement("p");
     const myFoodImage = new Image();
@@ -20,6 +21,10 @@ export default function createHomepage() {
     foodDescription.textContent = "Our menu boasts a tantalizing array of sushi, sashimi, and specialty rolls, crafted with the freshest ingredients and precision by our skilled sushi chefs. Delight your palate with savory grilled dishes such as teriyaki, yakitori, and tempura, each bursting with authentic Japanese flavors.";
     ambianceDescription.textContent = "Immerse yourself in the serene ambiance of our restaurant, adorned with elegant décor and ambient lighting, reminiscent of a tranquil Japanese garden. Whether you're seeking a casual dining experience or a memorable celebration, Sakura Sushi & Grill promises an unforgettable culinary adventure for all who seek the taste of Japan.";
 
+    heroSection.classList.add("hero-section");
+    mainSection.classList.add("main-section");
+    mainDescription.classList.add("main-text");
+
     heroSection.appendChild(primaryHeading);
     mainSection.appendChild(mainDescription);
     mainSection.appendChild(myFoodImage);
@@ -28,6 +33,7 @@ export default function createHomepage() {
     mainSection.appendChild(ambianceDescription);
     mainWrapper.appendChild(heroSection);
     mainWrapper.appendChild(mainSection);
+
     return mainWrapper;
   };
 
@@ -38,6 +44,7 @@ export default function createHomepage() {
     const contactListItem1 = document.createElement("li");
     const contactListItem2 = document.createElement("li");
     const contactListItem3 = document.createElement("li");
+    const socialMediaWrapper = document.createElement("div");
     const socialMediaText = document.createElement("p");
     const socialMediaList = document.createElement("ul");
     const socialMediaListItem1 = document.createElement("li");
@@ -52,17 +59,21 @@ export default function createHomepage() {
     socialMediaListItem1.textContent = "Instagram: @sakurasushigrill";
     socialMediaListItem2.textContent = "Facebook: /SakuraSushiGrillKyoto";
     socialMediaListItem3.textContent = "Twitter: @SakuraKyoto";
+
+    socialMediaText.classList.add("social-media-text");
   
     socialMediaList.appendChild(socialMediaListItem1);
     socialMediaList.appendChild(socialMediaListItem2);
     socialMediaList.appendChild(socialMediaListItem3);
+    socialMediaWrapper.appendChild(socialMediaText);
+    socialMediaWrapper.appendChild(socialMediaList);
     contactList.appendChild(contactListItem1);
     contactList.appendChild(contactListItem2);
     contactList.appendChild(contactListItem3);
     footerSection.appendChild(copyrightText);
     footerSection.appendChild(contactList);
-    footerSection.appendChild(socialMediaText);
-    footerSection.appendChild(socialMediaList);
+    footerSection.appendChild(socialMediaWrapper);
+
     return footerSection;
   };
 

@@ -143,3 +143,46 @@ footer .social-media-text {
   font-size: var(--fs-500);
   font-weight: var(--fw-bold);
 }
+
+/* Menu Page */
+
+.menu-grid {
+  width: 1200px;
+  padding: 3rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template: min-content repeat(4, 1fr) / repeat(2, 1fr);
+  gap: 5rem 0;
+}
+
+.menu-grid img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  justify-self: center;
+  border-radius: 3px;
+}
+
+.menu-grid h2 {
+  grid-column: 1 / -1;
+  font-size: var(--fs-500);
+  line-height: 1.4;
+}
+
+.menu-grid div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.menu-grid h3 {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
+}
+
+.menu-grid p {
+  font-size: var(--fs-500);
+  line-height: 1.4;
+}

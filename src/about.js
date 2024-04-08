@@ -1,5 +1,3 @@
-import "./styles/general-style.css";
-
 export default function aboutPage() {
   const main = () => {
     const mainWrapper = document.createElement("main");

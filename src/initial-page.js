@@ -1,6 +1,7 @@
+import createImage from "./create-images";
+
 import foodImage from "./images/food_display.jpg";
 import ambianceImage from "./images/restaurant_interior.jpg";
-import "./styles/general-style.css";
 
 export default function createHomepage() {
   const main = () => {
@@ -11,10 +12,9 @@ export default function createHomepage() {
     const mainDescription = document.createElement("h2");
     const foodDescription = document.createElement("p");
     const ambianceDescription = document.createElement("p");
-    const myFoodImage = new Image();
-    myFoodImage.src = foodImage;
-    const myAmbianceImage = new Image();
-    myAmbianceImage.src = ambianceImage;
+    
+    const myFoodImage = createImage(foodImage);
+    const myAmbianceImage = createImage(ambianceImage);
 
     primaryHeading.textContent = "Indulge in Authentic Japanese Flavors: A Culinary Journey Awaits at Sakura Sushi & Grill!";
     mainDescription.textContent = "Welcome to Sakura Sushi & Grill, where culinary excellence meets traditional Japanese charm. Step into a world of exquisite flavors and meticulous craftsmanship as we invite you on a gastronomic journey through the heart of Japan.";

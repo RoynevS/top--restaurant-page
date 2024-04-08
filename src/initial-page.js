@@ -37,45 +37,5 @@ export default function createHomepage() {
     return mainWrapper;
   };
 
-  const footer = () => {
-    const footerSection = document.createElement("footer");
-    const copyrightText = document.createElement("p");
-    const contactList = document.createElement("ul");
-    const contactListItem1 = document.createElement("li");
-    const contactListItem2 = document.createElement("li");
-    const contactListItem3 = document.createElement("li");
-    const socialMediaWrapper = document.createElement("div");
-    const socialMediaText = document.createElement("p");
-    const socialMediaList = document.createElement("ul");
-    const socialMediaListItem1 = document.createElement("li");
-    const socialMediaListItem2 = document.createElement("li");
-    const socialMediaListItem3 = document.createElement("li");
-
-    copyrightText.textContent = "© 2024 Sakura Sushi & Grill. All rights reserved.";
-    contactListItem1.textContent = "123 Cherry Blossom Avenue, Kyoto, Japan";
-    contactListItem2.textContent = "Phone: +81 (0)75-123-4567";
-    contactListItem3.textContent = "Email: info@sakurasushigrill.com";
-    socialMediaText.textContent = "Follow us on social media:";
-    socialMediaListItem1.textContent = "Instagram: @sakurasushigrill";
-    socialMediaListItem2.textContent = "Facebook: /SakuraSushiGrillKyoto";
-    socialMediaListItem3.textContent = "Twitter: @SakuraKyoto";
-
-    socialMediaText.classList.add("social-media-text");
-  
-    socialMediaList.appendChild(socialMediaListItem1);
-    socialMediaList.appendChild(socialMediaListItem2);
-    socialMediaList.appendChild(socialMediaListItem3);
-    socialMediaWrapper.appendChild(socialMediaText);
-    socialMediaWrapper.appendChild(socialMediaList);
-    contactList.appendChild(contactListItem1);
-    contactList.appendChild(contactListItem2);
-    contactList.appendChild(contactListItem3);
-    footerSection.appendChild(copyrightText);
-    footerSection.appendChild(contactList);
-    footerSection.appendChild(socialMediaWrapper);
-
-    return footerSection;
-  };
-
-  return { main, footer};
+  return { main };
 }

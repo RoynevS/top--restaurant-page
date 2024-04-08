@@ -1,4 +1,5 @@
 import menuItem from "./menu-items";
+import createImage from "./create-images";
 
 import sakuraRollsImage from "./images/sakura_rolls.jpg";
 import teriyakiChickenDonburiImage from "./images/teriyaki_chicken_donburi.jpg";
@@ -6,24 +7,16 @@ import sashimiPlatterImage from "./images/sashimi_platter.jpg";
 import yakitoriSkewersImage from "./images/yakitori_skewers.jpg";
 import tempuraShrimpUdonImage from "./images/tempura_shrimp_udon.jpg";
 
-import "./styles/general-style.css";
-
 export default function menuPage() {
   const main = () => {
     const mainWrapper = document.createElement("main");
     const menuDescription = document.createElement("h2");
 
-    const foodImage1 = new Image();
-    const foodImage2 = new Image();
-    const foodImage3 = new Image();
-    const foodImage4 = new Image();
-    const foodImage5 = new Image();
-
-    foodImage1.src = sakuraRollsImage;
-    foodImage2.src = teriyakiChickenDonburiImage;
-    foodImage3.src = sashimiPlatterImage;
-    foodImage4.src = yakitoriSkewersImage;
-    foodImage5.src = tempuraShrimpUdonImage;
+    const foodImage1 = createImage(sakuraRollsImage);
+    const foodImage2 = createImage(teriyakiChickenDonburiImage);
+    const foodImage3 = createImage(sashimiPlatterImage);
+    const foodImage4 = createImage(yakitoriSkewersImage);
+    const foodImage5 = createImage(tempuraShrimpUdonImage);
 
     menuDescription.textContent = "Each dish on our menu is a celebration of fresh, premium ingredients, expertly prepared by our talented chefs who take pride in delivering an unforgettable dining experience. Whether you're a sushi aficionado craving the perfect nigiri or seeking the comforting warmth of a steaming bowl of udon, our menu offers something to delight every palate.";
 
